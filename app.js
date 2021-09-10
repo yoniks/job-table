@@ -26,7 +26,7 @@ app.use(bodyParser.text({ type: 'text/html' }))
 
   main().catch(err => console.log(err));
   async function main() {
-      await mongoose.connect('mongodb://localhost:27017/wetask');
+      await mongoose.connect('mongodb://localhost:27017/simpletask');
   }
 
       const table_0 = new mongoose.Schema({idTable: Number, rows: Number, cols: Number});

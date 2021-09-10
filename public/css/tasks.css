@@ -1,0 +1,54 @@
+body{
+    font-family: "Montserrat";
+}
+
+a:link{
+     text-decoration:none;
+}
+#section0{
+    padding-left:30%;
+    padding-right: 30%;
+    background-color:slategray;
+    color: floralwhite;
+    text-align: center;
+  padding-top: 3%;
+   padding-bottom: 3%;
+    margin-top: 10%;
+}
+#section1{
+       background-image: -webkit-linear-gradient(-65deg, #87CEEB  50%, #E4E9FD 50%);
+    color: floralwhite;
+    padding-top: 3%;
+    padding-bottom: 3%;
+     padding-left:10%;
+    padding-right: 10%;
+}
+.note-text{
+    padding-top: 4%;
+    text-align: center;
+    padding-bottom: 4%;
+    color: #283149;
+}
+
+/*input[type="text"] {
+
+  text-align: center;
+  height: 50%;
+  border: none;
+  font-size: 20px;
+  font-weight: 200;
+
+}*/
+
+
+
+
+
+/*.section0{
+text-align: center;
+    padding-top: 25px;
+}
+.section1{
+    text-align: center;
+    padding-top: 25px;
+}*/

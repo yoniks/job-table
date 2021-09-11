@@ -86,7 +86,7 @@
 
 
 
-  <form action="/task/tc/TaskCreate"  method="post"><!--action   ***-->
+  <form action="/task/:id_prj"  method="post"><!--action   ***-->
 
 
     <div class="col-lg-2" style="padding:0.5%">
@@ -132,7 +132,7 @@
 
 
 
-  <form action="/task/<%=idTask%>/TaskEdit"  method="post"><!--action   ***-->
+  <form action="/task/<%=idTask%>?_method=PATCH"  method="post"><!--action   ***-->
      
     <div class="col-lg-2" style="padding:0.5%">
 
@@ -173,7 +173,7 @@
 
 
 
-<form action="/task/<%=idTask%>/DeleteTaskObj"  method="post"><!--action   ***-->
+<form action="/task/<%=idTask%>?_method=DELETE"  method="post"><!--action   ***-->
  
   <div class="col-lg-2" style="padding:0.5%">
   

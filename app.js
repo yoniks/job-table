@@ -1,6 +1,7 @@
  const express = require('express');
+var methodOverride = require('method-override')
   const app = express();
- //const bodyParser=require("body-parser");
+
  var bodyParser = require('body-parser');
  const _=require('lodash');
  const {render} = require("ejs");
@@ -18,6 +19,7 @@ app.use(bodyParser.text({ type: 'text/html' }))
  app.use(bodyParser.json())
 
  app.set('view engine','ejs');
+app.set(methodOverride('_method'))
  var existPrjs=[];
  let isOpenedPrj=0;
 
@@ -429,18 +431,15 @@ const taskEdit=(req,res) => {
 
     app.route("/").get(getAllId);
 
-  app.route("/task/tc/TaskCreate").post(taskCreated);
+  app.route("/task/:id_prj").get(getProjectTask).post(taskCreated);
 
       app.route("/task/:id_prj/TaskEdit").post(taskEdit);
-      app.route("/task/:id_prj/DeleteTaskObj").post(deleteTaskObj);
+      app.route("/task/:id_prj").delete(deleteTaskObj);
 
 
       app.route("/task/:id_prj/:toValue").post(SelectedTask);
         
 
-
-      app.route("/task/:id_prj").get(getProjectTask); 
-    //  app.route("/task").get(getProjectTask);
 
     
       app.listen(process.env.PORT || port,function( ) {

@@ -433,7 +433,7 @@ const taskEdit=(req,res) => {
 
   app.route("/task/:id_prj").get(getProjectTask).post(taskCreated);
 
-      app.route("/task/:id_prj/TaskEdit").post(taskEdit);
+      app.route("/task/:id_prj").patch(taskEdit);
       app.route("/task/:id_prj").delete(deleteTaskObj);
 
 
